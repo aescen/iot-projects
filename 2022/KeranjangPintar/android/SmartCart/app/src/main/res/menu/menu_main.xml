@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="id.ac.plnm.smartcart.ui.main.view.MainActivity">
+  <item
+    android:id="@+id/settings"
+    android:orderInCategory="100"
+    android:icon="?ic_settings"
+    android:title="@string/action_settings"
+    app:showAsAction="ifRoom" />
+</menu>

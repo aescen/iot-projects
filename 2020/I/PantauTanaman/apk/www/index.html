@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+
+  <meta name="theme-color" content="#007aff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Tanaman</title>
+  
+  
+  
+  
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas">
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+		  <div class="navbar-bg"></div>
+		  <div class="navbar-inner sliding">
+			<div class="title">Tanaman</div>
+		  </div>
+		</div>
+		
+        <!-- Scrollable page content-->
+        <div class="page-content ptr-content">
+			<div class="ptr-preloader">
+				<div class="preloader"></div>
+				<div class="ptr-arrow"></div>
+			</div>
+			
+			<div class="card">
+				<div class="card-content">
+					<div class="list media-list">
+					  <ul>
+						<li class="item-content">
+						  <div class="item-media"><img id="img-tanaman1" src="assets/tanaman-grey.png" width="72"/></div>
+						  <div class="item-inner">
+							<div class="item-title-row">
+							  <div class="item-title"><strong>Tanaman 1</strong></div>
+							</div>
+							<div class="item-subtitle">Kelembapan: <span id="kelembapan1">...</span></div>
+							<div class="item-subtitle">Tinggi: <span id="tinggi1"></span></div>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-content">
+					<div class="list media-list">
+					  <ul>
+						<li class="item-content">
+						  <div class="item-media"><img id="img-tanaman2" src="assets/tanaman-grey.png" width="72"/></div>
+						  <div class="item-inner">
+							<div class="item-title-row">
+							  <div class="item-title"><strong>Tanaman 2</strong></div>
+							</div>
+							<div class="item-subtitle">							
+							  <div class="item-subtitle">Kelembapan: <span id="kelembapan2">...</span></div>
+							  <div class="item-subtitle">Tinggi: <span id="tinggi2"></span></div>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-content">
+					<div class="list media-list">
+					  <ul>
+						<li class="item-content">
+						  <div class="item-media"><img id="img-tanaman3" src="assets/tanaman-grey.png" width="72"/></div>
+						  <div class="item-inner">
+							<div class="item-title-row">
+							  <div class="item-title"><strong>Tanaman 3</strong></div>
+							</div>
+							<div class="item-subtitle">Kelembapan: <span id="kelembapan3">...</span></div>
+							<div class="item-subtitle">Tinggi: <span id="tinggi3"></span></div>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-content">
+					<div class="list media-list">
+					  <ul>
+						<li class="item-content">
+						  <div class="item-media"><img id="img-tanaman4" src="assets/tanaman-grey.png" width="72"/></div>
+						  <div class="item-inner">
+							<div class="item-title-row">
+							  <div class="item-title"><strong>Tanaman 4</strong></div>
+							</div>
+							<div class="item-subtitle">Kelembapan: <span id="kelembapan4">...</span></div>
+							<div class="item-subtitle">Tinggi: <span id="tinggi4"></span></div>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-content">
+					<div class="list media-list">
+					  <ul>
+						<li class="item-content">
+						  <div class="item-media"><img id="img-tanaman5" src="assets/tanaman-grey.png" width="72"/></div>
+						  <div class="item-inner">
+							<div class="item-title-row">
+							  <div class="item-title"><strong>Tanaman 5</strong></div>
+							</div>
+							<div class="item-subtitle">Kelembapan: <span id="kelembapan5">...</span></div>
+							<div class="item-subtitle">Tinggi: <span id="tinggi5"></span></div>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- CORDOVA_PLACEHOLDER_DONT_REMOVE -->
+  <!-- Framework7 library -->
+  <script defer src="framework7/js/framework7.bundle.min.js"></script>
+  <!-- Cordova APIs -->
+  <script defer src="js/cordova-app.js"></script>
+  <!-- App routes -->
+  <script defer src="js/routes.js"></script>
+  <!-- Firebase scripts -->
+  <script defer src="js/firebase-app.js"></script>
+  <script defer src="js/firebase-auth.js"></script>
+  <script defer src="js/firebase-database.js"></script>
+  <script defer src="js/firebase-analytics.js"></script>
+  <!-- App scripts -->
+  <script defer src="js/app.js"></script>
+</body>
+</html>

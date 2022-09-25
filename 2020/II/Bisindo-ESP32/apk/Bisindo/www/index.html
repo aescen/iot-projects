@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Bisindo</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="panel panel-left panel-cover">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="title left">Menu</div>
+			</div>
+		</div>
+        <div class="list links-list left">
+			<ul>
+				<li><a href="#" class="panel-close link back">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons left">home</i></div>
+							<div class="item-inner">
+								<div class="item-title">Main</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li><a href="/about/" class="panel-close">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons left">info_round</i></div>
+							<div class="item-inner">
+								<div class="item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="page">
+		
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link panel-open">
+						<i class="f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="title center">Bisindo</div>
+				<div class="right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="page-content ptr-content">
+			<div class="ptr-preloader">
+				<div class="preloader"></div>
+				<div class="ptr-arrow"></div>
+			</div>
+			<!-- Scrollable page content -->
+			<div class="my-scrolling-content ptr-watch-scrollable">
+				<div class="block-title">Simbol</div>
+				<div>
+					<!-- Card view for flow sensor data-->
+					<div class="card card-outline">
+					  <div class="card-content text-align-center">
+						<!-- Card content -->
+						<div class="bg-color-white" style="height: 84px;text-align: center;">
+							<div style="font-size:38px;text-align:center;vertical-align: middle;text-shadow: 2px 2px #aaaaaa;" id="status">...</div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			 </div>			
+          </div>
+			<!-- Full preloader layout for MD theme -->
+			<div class="preloader">
+			  <span class="preloader-inner">
+				<span class="preloader-inner-gap"></span>
+				<span class="preloader-inner-left">
+					<span class="preloader-inner-half-circle"></span>
+				</span>
+				<span class="preloader-inner-right">
+					<span class="preloader-inner-half-circle"></span>
+				</span>
+			  </span>
+			</div>		  
+        </div>
+      </div>
+    </div>
+	<!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script type="text/javascript" src="./js/firebase-app.js"></script>
+	<!-- Add additional services that you want to use -->
+	<script type="text/javascript" src="./js/firebase-auth.js"></script>
+	<script type="text/javascript" src="./js/firebase-database.js"></script>
+	<!-- Path to your app JS-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">app.preloader.show();refOnce();</script>
+  </body>
+</html>

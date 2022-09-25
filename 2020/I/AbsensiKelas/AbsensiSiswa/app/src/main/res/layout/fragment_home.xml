@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".main.guru.home.HomeGuruFragment"
+    tools:ignore="UseCompoundDrawables">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:id="@+id/title_kelas_sdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="@style/kelas_sdn_p"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="@string/title_kelas_sdn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/kelas_rendah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="top"
+                android:text="@string/kelas_rendah"
+                android:textAppearance="@style/kelas"
+                app:layout_constraintStart_toStartOf="@id/kelas_1A"
+                app:layout_constraintTop_toBottomOf="@+id/title_kelas_sdn" />
+
+            <LinearLayout
+                android:id="@+id/kelas_1A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_rendah"
+                app:layout_constraintEnd_toStartOf="@id/kelas_1B">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_1a"
+                    android:textAppearance="@style/kelas_txt"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_1B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_1A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_rendah"
+                app:layout_constraintEnd_toStartOf="@id/kelas_2A">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_1b"
+                    android:textAppearance="@style/kelas_txt"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_2A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_1B"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_rendah"
+                app:layout_constraintEnd_toStartOf="@id/kelas_2B">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_2a"
+                    android:textAppearance="@style/kelas_txt"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_2B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_2A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_rendah"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_2b"
+                    android:textAppearance="@style/kelas_txt"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_2C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/kelas_1A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_1A">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_2c"
+                    android:textAppearance="@style/kelas_txt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_3A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_2C"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_1B"
+                app:layout_constraintEnd_toStartOf="@id/kelas_3B">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_3a"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_3B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_3A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_1A"
+                app:layout_constraintEnd_toStartOf="@id/kelas_2B">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_3b"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/kelas_tinggi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="top"
+                android:text="@string/kelas_tinggi"
+                android:textAppearance="@style/kelas"
+                app:layout_constraintStart_toStartOf="@id/kelas_4A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_2C" />
+
+            <LinearLayout
+                android:id="@+id/kelas_4A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_tinggi"
+                app:layout_constraintEnd_toStartOf="@id/kelas_4B" >
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_4a"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_4B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_4A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_tinggi"
+                app:layout_constraintEnd_toStartOf="@id/kelas_5A">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_4b"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_5A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_tinggi"
+                app:layout_constraintStart_toEndOf="@id/kelas_4B"
+                app:layout_constraintEnd_toStartOf="@id/kelas_5B"
+                >
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_5a"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_5B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/kelas_5A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_tinggi"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_5b"
+                    android:textAppearance="@style/kelas_txt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_6A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="@id/kelas_4A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_4B"
+                app:layout_constraintEnd_toEndOf="@id/kelas_4A">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_6a"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kelas_6B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginkelas"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/kelas_6A"
+                app:layout_constraintTop_toBottomOf="@+id/kelas_4A"
+                app:layout_constraintEnd_toStartOf="@id/kelas_5A">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/button_blue_kelas"
+                    android:contentDescription="@string/icon_kelas" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_6b"
+                    android:textAppearance="@style/kelas_txt"
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

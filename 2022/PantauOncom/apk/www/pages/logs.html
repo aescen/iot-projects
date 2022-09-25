@@ -1,0 +1,31 @@
+<template>
+  <div class="page" data-name="logs">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title" style="margin-left:0px;">Logs</div>
+      </div>
+    </div>
+    <div class="page-content">
+
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, {$, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) => {
+    clearTimeout(props.waitPage);
+
+    $on('pageInit', () => {
+
+    });
+
+    // Return render function
+    return $render;
+  };
+</script>

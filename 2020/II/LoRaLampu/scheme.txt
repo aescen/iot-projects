@@ -1,0 +1,25 @@
+Addressing scheme: 1
+
+Range   Type Gate Total  
+00      n         : 1 (n/a or free)
+01 - 0F S         : 15 servers
+10 - 1F G    F0   : 15 nodes
+20 - 2F G    F1   : 15 nodes
+30 - 3F G    F2   : 15 nodes
+40 - 4F G    F3   : 15 nodes
+50 - 5F G    F4   : 15 nodes
+60 - 6F G    F5   : 15 nodes
+70 - 7F G    F6   : 15 nodes
+80 - 8F G    F7   : 15 nodes
+90 - 9F G    F8   : 15 nodes
+A0 - AF G    F9   : 15 nodes
+B0 - BF G    FA   : 15 nodes
+C0 - CF G    FB   : 15 nodes
+D0 - DF G    FC   : 15 nodes
+E0 - EF G    FD   : 15 nodes
+FE      n         : 1 (n/a or free); For broadcast to all?
+FF      n         : 1 (n/a or free)
+
+210 nodes
+14 gates
+15 servers

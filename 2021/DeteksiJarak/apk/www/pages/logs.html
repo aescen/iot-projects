@@ -1,0 +1,132 @@
+<template>
+  <div class="page" data-name="logs">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title" style="margin-left:0px;">Logs</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="card">
+        <div class="card-header">Date range</div>
+        <div class="card-content card-content-padding text-align-center">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-input-wrap">
+                      <input type="text" placeholder="Select date range" readonly="readonly" id="logs-range" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="data-table data-table-init card">
+        <!-- Card Content -->
+        <div class="card-content">
+          <table id="logs-table" name="logs-table">
+            <thead>
+              <tr>
+                <th class="label-cell">Waktu</th>
+                <th class="numeric-cell">Total Deteksi</th>
+                <th class="numeric-cell">Total Riskan</th>
+              </tr>
+            </thead>
+            ${logsData.map(log => $h`
+              <tbody>
+                <tr>
+                  <td class="label-cell">${newDate(log.id).datetime}</td>
+                  <td class="numeric-cell">${log.person}</td>
+                  <td class="numeric-cell">${log.risky_distance}</td>
+                </tr>
+              </tbody>
+            `)}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, {$, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) => {
+    clearTimeout(props.waitPage);
+    let logsData = [];
+    const tableHead = '' +
+      '<thead>' +
+      ' <tr>' +
+      '   <th class="label-cell">Waktu</th>' +
+      '   <th class="numeric-cell">Total Deteksi</th>' +
+      '   <th class="numeric-cell">Total Riskan</th>' +
+      ' </tr>' +
+      '</thead>';
+
+    const updateTable = (logs) => {
+      const filteredLogs = logs.filter(log => (log.person != 0 && log.risky_distance != 0));
+      const tableData = filteredLogs.map(log => {
+        if (log === null) return;
+        return '' +
+          '<tbody>' +
+          ' <tr>' +
+          '   <td class="label-cell">' + `${newDate(log.id).datetime}` + '</td>' +
+          '   <td class="numeric-cell">' + `${log.person}` + '</td>' +
+          '   <td class="numeric-cell">' + `${log.risky_distance}` + '</td>' +
+          ' </tr>' +
+          '</tbody>';
+      });
+      if (tableData !== null) $('#logs-table').html(`${tableHead}${tableData}`);
+    };
+    
+    const getRange = (range) => {
+      if (range.length === 2) {
+        if (range[0].getDate() !== range[1].getDate()) {
+          return {
+            start: newDate(range[0].setHours(0, 0, 0, 0)),
+            end: newDate(range[1].setHours(23, 59, 59, 999))
+          };
+        }
+      }
+      return {
+        start: newDate(range[0].setHours(0, 0, 0, 0)),
+        end: false
+      };
+    };
+
+    const updateLogsData = async (range) => {
+      $f7.preloader.show();
+      const data = await refOnceLogs(getRange(range));
+      updateTable(data);
+      $f7.preloader.hide();
+    };
+
+    updateLogsData([new Date()]);
+
+    $on('pageInit', () => {
+    const logsRange = $f7.calendar.create({
+        inputEl: '#logs-range',
+        minDate: new Date('2021-10-1'),
+        maxDate: new Date(),
+        rangePicker: true,
+        value: [new Date()]
+      });
+      
+      logsRange.on('closed', () => {
+        if (typeof logsRange.getValue() !== 'undefined') {
+          updateLogsData(logsRange.getValue());
+        }
+      });
+    });
+
+    // Return render function
+    return $render;
+  };
+</script>

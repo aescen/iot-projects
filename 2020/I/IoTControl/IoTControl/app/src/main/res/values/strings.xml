@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IoT Control+</string>
+    <string name="action_settings">Settings</string>
+    <string name="config_task_name">new_task_name</string>
+</resources>

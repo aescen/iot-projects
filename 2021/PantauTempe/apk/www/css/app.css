@@ -1,0 +1,17 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Your app custom styles here */
+.app-background-bottom {
+  position: absolute;
+  width: 100vw;
+  height: 84vh;
+  max-width: 100vw;
+  max-height: 84vh;
+  left: 0;
+  right: 0;
+  top: 15vh;
+  opacity: 0.8;
+}

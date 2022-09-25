@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingHorizontal="24dp"
+    android:id="@+id/id_fragment_about_guru"
+    tools:context=".main.guru.about.AboutGuruFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+        <TextView
+            android:id="@+id/biodata_diri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/biodata_diri"
+            android:textAppearance="@style/biodata_diri"
+            android:gravity="top"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_biodata_diri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/biodata_diri">
+
+            <!-- TODO: Nama Lengkap -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_nama_lengkap"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_nama_lengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Kota Lahir -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/kota_lahir"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_kota_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Tanggal Lahir -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/tanggal_lahir"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_tanggal_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Agama -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/agama"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_agama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Jenis Kelamin -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/jenis_kelamin"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_jenis_kelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Nomor Telepon (Hp) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/nomor_telepon_hp"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_nomor_telepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+            <!-- TODO: Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content"
+                android:text="@string/email"
+                android:textAppearance="@style/biodata_diri_subtitle"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_logout_about_guru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/logout"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@id/bt_edit_about_guru"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/bt_edit_about_guru"/>
+
+        <ImageButton
+            android:id="@+id/bt_edit_about_guru"
+            android:layout_width="@dimen/size_button"
+            android:layout_height="@dimen/size_button"
+            android:layout_marginTop="@dimen/margin_biodata_content"
+            android:paddingBottom="@dimen/margin_biodata_content"
+            android:background="@drawable/ic_edit"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/container_biodata_diri"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/icon_edit" />
+
+        <View
+            android:id="@+id/bottom_border_about_guru"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_biodata_content"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/bt_edit_about_guru"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

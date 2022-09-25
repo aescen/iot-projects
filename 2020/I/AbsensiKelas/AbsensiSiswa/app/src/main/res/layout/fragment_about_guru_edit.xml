@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingHorizontal="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.guru.about.AboutGuruEditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="LabelFor">
+
+        <TextView
+            android:id="@+id/biodata_diri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/biodata_diri"
+            android:textAppearance="@style/biodata_diri"
+            android:gravity="top"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_biodata_diri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/biodata_diri">
+
+            <!-- TODO: Nama Lengkap -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_nama_lengkap"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/ed_nama_lengkap_about_edit_guru"/>
+
+            <EditText
+                android:id="@+id/ed_nama_lengkap_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content"
+                android:hint="@string/nama_lengkap_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="false"
+                android:singleLine="true"
+                android:background="@drawable/line"
+                android:autofillHints="@string/masukkan_nama_lengkap" />
+
+            <!-- TODO: Kota Lahir -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/kota_lahir"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/ed_kota_lahir_about_edit_guru"/>
+
+            <EditText
+                android:id="@+id/ed_kota_lahir_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content"
+                android:hint="@string/kota_lahir_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="false"
+                android:singleLine="true"
+                android:background="@drawable/line"
+                android:autofillHints="@string/masukkan_kota_lahir" />
+
+            <!-- TODO: Tanggal Lahir -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/tanggal_lahir"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/ed_tanggal_lahir_about_edit_guru"/>
+
+            <EditText
+                android:id="@+id/ed_tanggal_lahir_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/list_content"
+                android:autofillHints="@string/pilih_tanggal_lahir"
+                android:hint="@string/tanggal_lahir_hint"
+                android:inputType="date"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="false"
+                android:singleLine="true"
+                android:background="@drawable/line"/>
+
+            <!-- TODO: Agama -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/agama"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/spinner_agama_about_edit_guru"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_agama_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/pilih_agama"
+                android:entries="@array/list_agama"
+                style="@style/Widget.AppCompat.Spinner"
+                android:theme="@style/spinner"/>
+
+            <!-- TODO: Jenis Kelamin -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/jenis_kelamin"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/rg_jenis_kelamin_about_edit_guru"/>
+
+            <RadioGroup
+                android:id="@+id/rg_jenis_kelamin_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_pria_about_edit_guru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pria"
+                    android:textAppearance="@style/list_content" />
+
+                <RadioButton
+                    android:id="@+id/rb_perempuan_about_edit_guru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perempuan"
+                    android:textAppearance="@style/list_content" />
+
+            </RadioGroup>
+
+            <!-- TODO: Nomor Telepon (Hp) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/nomor_telepon_hp"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/ed_nomor_telepon_about_edit_guru"/>
+
+            <EditText
+                android:id="@+id/ed_nomor_telepon_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nomor_telepon_hint"
+                android:textAppearance="@style/list_content"
+                android:autofillHints="@string/masukkan_nomor_hp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="false"
+                android:singleLine="true"
+                android:background="@drawable/line"/>
+
+            <!-- TODO: Email -->
+<!--            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_biodata_content_edit"
+                android:text="@string/email"
+                android:textAppearance="@style/biodata_diri_subtitle"
+                android:labelFor="@id/ed_email_about_edit_guru"/>
+
+            <EditText
+                android:id="@+id/ed_email_about_edit_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_hint"
+                android:textAppearance="@style/list_content"
+                android:autofillHints="@string/masukkan_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:longClickable="false"
+                android:singleLine="true"/>-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:contentDescription="@string/line" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bt_about_save_about_edit_guru"
+            android:layout_width="@dimen/size_button"
+            android:layout_height="@dimen/size_button"
+            android:layout_marginTop="@dimen/margin_biodata_content_edit"
+            android:background="@drawable/ic_check"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/container_biodata_diri"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/icon_check" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Monitor Fermentasi</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+	<!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="color-theme-gray statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="color-theme-gray panel panel-left panel-cover">
+		<div class="color-theme-gray navbar">
+			<div class="color-theme-gray navbar-inner">
+				<div class="color-theme-gray title left">Menu</div>
+			</div>
+		</div>
+        <div class="color-theme-gray list links-list left">
+			<ul>
+				<li><a href="/about/" class="color-theme-gray panel-close">
+						<div class="color-theme-gray item-content">
+							<div class="color-theme-gray item-media"><i class="color-theme-gray f7-icons">info_circle</i></div>
+							<div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="color-theme-gray view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="color-theme-gray page">
+		
+          <!-- Top Navbar -->
+          <div class="color-theme-gray navbar">
+            <div class="color-theme-gray navbar-inner">
+				<div class="color-theme-gray left">
+					<a href="#" class="color-theme-gray link panel-open">
+						<i class="color-theme-gray f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="color-theme-gray title center">Monitor Fermentasi</div>
+				<div class="color-theme-gray right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="color-theme-gray page-content ptr-content">
+			<div class="color-theme-gray ptr-preloader">
+				<div class="color-theme-gray preloader"></div>
+				<div class="color-theme-gray ptr-arrow"></div>
+			</div>
+			<!-- Scrollable page content -->
+			<div class="color-theme-gray my-scrolling-content ptr-watch-scrollable">
+				<!-- Node 1 -->
+				<div id="cardContent">
+					<div class="color-theme-gray card">
+					  <div class="color-theme-gray card-header"><strong>Node 01</strong></div>
+					  <div class="color-theme-gray card-content">
+						<div class="color-theme-gray list media-list">
+						  <ul>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgAirCondition1"><img src="./img/air-condition-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Humidity</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="airCondition1">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgTemp1"><img src="./img/temp-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Temperature</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="temperature1">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgMoist1"><img src="./img/moist-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Moisture</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="moisture1">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgStatus1"><img src="./img/status-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Status</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="status1">...</div>
+							  </div>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+				
+				<!-- Node 2 -->
+				<div id="cardContent">
+					<div class="color-theme-gray card">
+					  <div class="color-theme-gray card-header"><strong>Node 02</strong></div>
+					  <div class="color-theme-gray card-content">
+						<div class="color-theme-gray list media-list">
+						  <ul>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgAirCondition2"><img src="./img/air-condition-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Humidty</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="airCondition2">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgTemp2"><img src="./img/temp-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Temperature</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="temperature2">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgMoist2"><img src="./img/moist-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Moisture</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="moisture2">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-gray item-content">
+							  <div class="color-theme-gray item-media" id="imgStatus2"><img src="./img/status-grey.png" width="44"/></div>
+							  <div class="color-theme-gray item-inner">
+								<div class="color-theme-gray item-title-row">
+								  <div class="color-theme-gray item-title">Status</div>
+								</div>
+								<div class="color-theme-gray item-subtitle" id="status2">...</div>
+							  </div>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+				
+			 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Path to main app JS -->
+	<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+	<!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script type="text/javascript" src="./js/firebase-app.js"></script>
+	<!-- Add additional services that you want to use -->
+	<script type="text/javascript" src="./js/firebase-auth.js"></script>
+	<script type="text/javascript" src="./js/firebase-database.js"></script>
+	<!-- Path to your app JS-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">app.preloader.show();refOnce();</script>
+  </body>
+</html>

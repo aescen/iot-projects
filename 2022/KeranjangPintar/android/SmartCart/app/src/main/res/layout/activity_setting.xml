@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="16dp"
+  tools:context=".ui.setting.view.SettingActivity">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="@string/dark_mode"
+    android:textColor="?attr/textColor"
+    android:textSize="18sp"
+    app:layout_constraintBottom_toBottomOf="@id/switch_theme"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.switchmaterial.SwitchMaterial
+    android:id="@+id/switch_theme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/ed_base_api_view_wrapper"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="272dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:boxCornerRadiusBottomEnd="8dp"
+    app:boxCornerRadiusBottomStart="8dp"
+    app:boxCornerRadiusTopEnd="8dp"
+    app:boxCornerRadiusTopStart="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/switch_theme">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/ed_base_api_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:autofillHints="http://192.168.43.1"
+      android:hint="@string/base_api_hint"
+      android:inputType="text"
+      android:selectAllOnFocus="true"
+      android:textIsSelectable="true" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/bt_save_base_api"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:text="@string/save"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/ed_base_api_view_wrapper"
+    app:layout_constraintTop_toBottomOf="@id/switch_theme" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

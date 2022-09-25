@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mm_name"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:layout_alignParentRight="true"
+        android:text="Me@0.0.0.0"
+        android:textSize="16dp"
+        android:textColor="@android:color/tertiary_text_light"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:id="@+id/mm_message_body"
+        android:background="@drawable/my_message"
+        android:textColor="#eee"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:textSize="18dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/placeholder_message"
+        />
+
+</LinearLayout>

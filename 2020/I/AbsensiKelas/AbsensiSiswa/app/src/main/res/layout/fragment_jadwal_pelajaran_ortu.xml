@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ortu.JadwalPelajaranOrtuFragment">
+
+    <TextView
+        android:id="@+id/tv_title_jadwal_ortu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_title_frag"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingVertical="6dp"
+        android:background="@color/bg_gray"
+        android:textAppearance="@style/title_fragment"
+        android:text="@string/title_jadwal_pelajaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_gambar_jadwal_pelajaran_ortu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="192dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_jadwal_ortu">
+
+        <TextView
+            android:id="@+id/tv_jadwal_pelajaran_ortu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:text="@string/gambar_format_jadwal_pelajaran"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_jadwal_pelajaran_ortu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/desc_gambar_jadwal_pelajaran"
+            android:layout_centerInParent="true"/>
+
+        <ProgressBar
+            android:id="@+id/pb_jadwal_pelajaran_ortu"
+            style="?android:attr/progressBarStyle"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button_jadwal_pelajaran_ortu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        tools:ignore="ContentDescription"
+        app:layout_constraintTop_toBottomOf="@id/rl_gambar_jadwal_pelajaran_ortu"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/jadwal_pelajaran_del_ortu"
+            android:layout_width="@dimen/ic_button_jadwal_pelajaran"
+            android:layout_height="@dimen/ic_button_jadwal_pelajaran"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_delete"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/jadwal_pelajaran_add_ortu"
+            android:layout_width="@dimen/ic_button_jadwal_pelajaran"
+            android:layout_height="@dimen/ic_button_jadwal_pelajaran"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ic_add_black"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/jadwal_pelajaran_send_ortu"
+            android:layout_width="@dimen/ic_button_jadwal_pelajaran"
+            android:layout_height="@dimen/ic_button_jadwal_pelajaran"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ic_send"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

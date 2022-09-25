@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Monitor Sortir Kubis</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+	<!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="color-theme-green statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="color-theme-green panel panel-left panel-cover">
+		<div class="color-theme-green navbar">
+			<div class="color-theme-green navbar-inner">
+				<div class="color-theme-green title left">Menu</div>
+			</div>
+		</div>
+        <div class="color-theme-green list links-list left">
+			<ul>
+				<li><a href="/about/" class="color-theme-green panel-close">
+						<div class="color-theme-green item-content">
+							<div class="color-theme-green item-media"><i class="color-theme-green f7-icons">info_circle</i></div>
+							<div class="color-theme-green item-inner">
+								<div class="color-theme-green item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+	  
+      <!-- Your main view, should have "view-main" class -->
+      <div class="color-theme-green view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="color-theme-green page">
+		
+          <!-- Top Navbar -->
+          <div class="color-theme-green navbar">
+            <div class="color-theme-green navbar-inner">
+				<div class="color-theme-green left">
+					<a href="#" class="color-theme-green link panel-open">
+						<i class="color-theme-green f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="color-theme-green title center">Monitor Sortir Kubis</div>
+            <div class="color-theme-green right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="color-theme-green page-content ptr-content">
+			<div class="color-theme-green ptr-preloader">
+				<div class="color-theme-green preloader"></div>
+				<div class="color-theme-green ptr-arrow"></div>
+			</div>
+			<!-- Scrollable page content -->
+			<div class="color-theme-green my-scrolling-content ptr-watch-scrollable">
+				<div id="cardContent">
+					<div class="color-theme-green data-table card card-outline">
+					<div class="color-theme-green card-content text-align-center">
+					  <table>
+						<thead>
+							<th class="color-theme-green label-cell"><strong>Warna</strong></th>
+							<th class="color-theme-green label-cell"><strong>Kualitas kubis</strong></th>
+						</thead>
+						<tbody>
+							<td class="color-theme-green label-cell" id="tdColor">...</td>
+							<td class="color-theme-green label-cell" id="tdQuality">...</td>
+						</tbody>
+					  </table>
+					</div>
+					</div>
+				</div>
+				<div id="cardContent">
+					<div class="color-theme-green data-table card card-outline">
+					<div class="color-theme-green card-content text-align-center">
+					  <table>
+						<thead>
+							<th class="color-theme-green label-cell"><strong>R</strong></th>
+							<th class="color-theme-green label-cell"><strong>G</strong></th>
+							<th class="color-theme-green label-cell"><strong>B</strong></th>
+						</thead>
+						<tbody>
+							<td class="color-theme-green label-cell" id="tdR">...</td>
+							<td class="color-theme-green label-cell" id="tdG">...</td>
+							<td class="color-theme-green label-cell" id="tdB">...</td>
+						</tbody>
+					  </table>
+					</div>
+					</div>
+				</div>
+				
+			 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Path to main app JS -->
+	<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+	<!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script type="text/javascript" src="./js/firebase-app.js"></script>
+	<!-- Add additional services that you want to use -->
+	<script type="text/javascript" src="./js/firebase-auth.js"></script>
+	<script type="text/javascript" src="./js/firebase-database.js"></script>
+	<!-- Path to your app JS-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">app.preloader.show();refOnce();</script>
+  </body>
+</html>

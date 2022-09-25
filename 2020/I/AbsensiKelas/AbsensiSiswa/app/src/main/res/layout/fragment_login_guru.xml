@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBar"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".login.LoginGuruFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/logo_tut_wu"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/logo_tut_wu"
+            android:gravity="center_horizontal|center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sdn_percoba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/sdn_percoba"
+            android:textAppearance="@style/sdn_percoba"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_tut_wu"
+            />
+
+        <EditText
+            android:id="@+id/nip"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="64dp"
+            android:autofillHints="Input NIP number here"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/nip"
+            android:includeFontPadding="true"
+            android:inputType="number"
+            android:lineSpacingExtra="10sp"
+            android:padding="8dp"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/password_guru"
+            android:textAppearance="@style/nip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sdn_percoba" />
+
+        <EditText
+            android:id="@+id/password_guru"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/nip"
+            android:background="@drawable/bg_edittext"
+            android:padding="8dp"
+            android:includeFontPadding="true"
+            android:lineSpacingExtra="10sp"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:nextFocusDown="@id/bt_login_guru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nip"
+            android:inputType="textPassword"
+            android:autofillHints="Masukkan nomor induk siswa" />
+
+        <Button
+            android:id="@+id/bt_login_guru"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_blue_wide"
+            android:text= "@string/login"
+            android:textAppearance="@style/label_button"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_guru" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

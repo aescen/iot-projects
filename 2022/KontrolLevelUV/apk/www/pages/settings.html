@@ -1,0 +1,60 @@
+<template>
+  <div class="page" data-name="settings">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title" style="margin-left:0px;">Settings</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="card">
+        <div class="card-content card-content-padding text-align-center">
+          <button class="button button-outline" id="open-url-server">Set Server</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, {$, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) => {
+    $f7.preloader.hide();
+    clearTimeout(props.waitPage);
+    $on('pageInit', () => {
+      $('#open-url-server').on('click', () => {
+        $f7.dialog.prompt('Enter url, ex. http://localhost:5000', (valUrl) => {
+          if (valUrl.trim()) {
+            try {
+              $serverUrl = checkProtocol(valUrl);
+              console.info($serverUrl);
+              var l = document.createElement('a');
+              l.href = $serverUrl + $logsUrl;
+              l = l.protocol + '//' + l.hostname + $logsUrl;
+              const newPrefsData = {
+                serverUrl: $serverUrl,
+                logsUrl: $logsUrl,
+                imageRoute: $imageRoute,
+                imageStreamRoute: $imageStreamRoute,
+                detectionEventSourceRoute: $detectionEventSourceRoute,
+              };
+
+              $appData.updateData(newPrefsData);
+              refreshImagesStream();
+              refreshImages();
+              showAlert(urls().server, 'Url:');
+            } catch (e) {
+              showAlert(e, 'Set url error!');
+            }
+          }
+        });
+      });
+    });
+    // Return render function
+    return $render;
+  }
+</script>

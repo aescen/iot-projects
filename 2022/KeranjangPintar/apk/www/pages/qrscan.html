@@ -1,0 +1,49 @@
+<template>
+  <div class="page" data-name="qrscan">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="title">QR Scanner</div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <p>QR Scanner</p>
+    </div>
+
+  </div>
+</template>
+
+<script>
+  export default (props, { $, $f7, $store, $on }) => {
+    function prepare(){
+      qrScan();
+      $(".page-previous").addClass('hideEl');
+      $(".page-current").addClass('transparentBg');
+      $("body").addClass("transparentBg");
+      $(".page-current .page-content").addClass("hideEl");
+    }
+
+    function clean() {
+      qrCancelScan();
+      qrHide();
+      $('*').removeClass("transparentBg");
+      $('*').removeClass("hideEl");
+      showAlert('Hide', 'QR Scanner');
+    }
+
+    $on('pageInit', () => {
+      $('#tab-qrscan').on('click', () => {
+
+      });
+    });
+
+    $on('pageReinit', () => {
+          $('#tab-qrscan').on('click', () => {
+
+          });
+        });
+
+    return $render;
+  };
+</script>

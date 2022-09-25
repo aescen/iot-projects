@@ -1,0 +1,35 @@
+{
+  "cwd": "D:\\UserFiles\\AshadiPutra\\Stuff\\Final-Projects\\Codes\\PengeringPadi\\apk\\PengeringPadi",
+  "type": [
+    "cordova"
+  ],
+  "name": "Pengering Padi",
+  "pkg": "id.ycmlg.pengeringpadi",
+  "framework": "core",
+  "template": "blank",
+  "bundler": false,
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-screen-orientation",
+	  "cordova-plugin-vibration",
+	  "cordova-plugin-file",
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen",
+	  "cordova-plugin-badge",
+	  "cordova-plugin-local-notification"
+    ]
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

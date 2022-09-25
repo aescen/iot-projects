@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Monitor Etching</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+	<!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="panel panel-left panel-cover">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="title left">Menu</div>
+			</div>
+		</div>
+        <div class="list links-list left">
+			<ul>
+				<li><a href="/about/" class="panel-close">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons">info_circle</i></div>
+							<div class="item-inner">
+								<div class="item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="page">
+		
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link panel-open">
+						<i class="f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="title center">Monitor Etching</div>
+				<div class="right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="page-content">
+			<!-- Scrollable page content -->
+			<div class="my-scrolling-content ptr-watch-scrollable">
+				<div id="cardContent">
+					<!-- Card view for etching status-->
+					<div class="card card-outline">
+					  <div class="card-header"><strong>Persentase</strong></div>
+					  <div class="card-content">
+						<!-- Card content -->
+					  </div>
+					  <div class="card-footer" id="etching"></div>
+					</div>
+					<!-- Card view for on/off button-->
+					<div class="card card-outline">
+					  <div class="card-header"><strong>Relay Goyang</strong></div>
+					  <div class="card-content">
+						<!-- Card content -->
+						  <div class="segmented segmented-raised" id="buttongoyang">
+						  </div>
+					  </div>
+					</div>
+					<!-- Card view for on/off button-->
+					<div class="card card-outline">
+					  <div class="card-header"><strong>Relay Lampu</strong></div>
+					  <div class="card-content">
+						<!-- Card content -->
+						  <div class="segmented segmented-raised" id="buttonlampu">
+						  </div>
+					  </div>
+					</div>
+				</div>
+			 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Path to your app jss-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">
+	app.preloader.show();
+	loadJSONOnce();
+	window.setInterval(function () {
+	  //do something
+	  loadJSON();
+	}, 1000);
+	</script>
+  </body>
+</html>

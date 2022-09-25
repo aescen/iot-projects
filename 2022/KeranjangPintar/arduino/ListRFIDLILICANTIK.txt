@@ -1,0 +1,178 @@
+#include <RFID.h>
+
+/*
+  Read a card using a mfrc522 reader on your SPI interface
+  Pin layout should be as follows (on Arduino Uno):
+  MOSI: Pin 11 / ICSP-4
+  MISO: Pin 12 / ICSP-1
+  SCK: Pin 13 / ISCP-3
+  SS/SDA: Pin 10
+  RST: Pin 9
+*/
+
+#include <SPI.h>
+#include <RFID.h>
+
+#define SS_PIN 10
+#define RST_PIN 9
+
+RFID rfid(SS_PIN, RST_PIN);
+
+
+//int led = LED_BUILTIN;
+int serNum[5];
+int cards[][5] = {
+  //Card: 213 105 65 226 31
+  //Keytag: 180 35 38 131 50
+  {211, 114, 175, 93, 83}, //Device ?
+  {195, 180, 175, 93, 133}, //Device ?
+  {195, 120, 175, 93, 73}, //Device ?
+  {195, 174, 175, 93, 159}, //Device ?
+  {195, 168, 175, 93, 153}, //Device ?
+  {19, 134, 175, 93, 103},
+  {195, 132, 175, 93, 181}, //Device ?
+  {227, 156, 175, 93, 141}, //Device ?
+  {211, 162, 175, 93, 131}, //Device ?
+  {195, 138, 175, 93, 187} //Intentionally leave different for testing purpose, return default for normal usage!
+};
+
+String cardNo = "";
+bool access = false;
+float Harga;
+//uint8_t var_id;
+//uint8_t varid;
+//bool access = false;
+
+void setup() {
+
+  Serial.begin(1000000);
+  SPI.begin();
+  rfid.init();
+  Serial.println("RFID init");
+  //pinMode(led, OUTPUT);
+
+  //digitalWrite(led, LOW);
+
+}
+
+void loop() {
+
+  if (rfid.isCard()) {
+
+    if (rfid.readCardSerial()) {
+      Serial.print(rfid.serNum[0]);
+      Serial.print(" ");
+      Serial.print(rfid.serNum[1]);
+      Serial.print(" ");
+      Serial.print(rfid.serNum[2]);
+      Serial.print(" ");
+      Serial.print(rfid.serNum[3]);
+      Serial.print(" ");
+      Serial.print(rfid.serNum[4]);
+      Serial.println("");
+      cardNo = (String)rfid.serNum[0] + (String)rfid.serNum[1] + (String)rfid.serNum[2] + (String) rfid.serNum[3] + (String)rfid.serNum[4];
+
+
+      for (int x = 0; x < sizeof(cards); x++) {
+        for (int i = 0; i < sizeof(rfid.serNum); i++ ) {
+          if (rfid.serNum[i] != cards[x][i]) {
+            access = false;
+            break;
+          } else {
+            access = true;
+          }
+        }
+        if (access) break;
+      }
+
+    }
+
+    if (access) {
+      //      Serial.println("Welcome!");
+      //      Serial.println(cardNo);
+      String personName = checkup(cardNo);
+      Serial.print("Barang diambil : ");
+      Serial.println(personName);
+      Serial.print("Harga : ");
+      Serial.println(Harga);
+      //      digitalWrite(led, HIGH);
+      //      delay(1000);
+      //      digitalWrite(led, LOW);
+      //      //digitalWrite(power, HIGH);
+      //      delay(1000);
+      //      //digitalWrite(power, LOW);
+
+    } else {
+      Serial.println("Not allowed!");
+      //      digitalWrite(led, HIGH);
+      //      delay(500);
+      //      digitalWrite(led, LOW);
+      //      delay(500);
+      //      digitalWrite(led, HIGH);
+      //      delay(500);
+      //      digitalWrite(led, LOW);
+    }
+  }
+
+  rfid.halt();
+  delay(3000);
+
+}
+
+String checkup(String cardNo)
+{
+  String personName;
+
+  if (cardNo == "2111141759383") {
+    personName = "Kerudung";
+    Harga = 25000;
+    //varid = 2;
+  }
+  else if (cardNo == "19518017593133") {
+    personName = "Kerudung";
+    Harga = 25000;
+    //varid = 2;
+  }
+  else if (cardNo == "1951201759373") {
+    personName = "Kaos Putih";
+    Harga = 50000;
+    //varid = 3;
+  }
+  else if (cardNo == "19517417593159") {
+    personName = "Kaos Putih";
+    Harga = 50000;
+    //varid = 3;
+  }
+  else if (cardNo == "19516817593153") {
+    personName = "Kaos Hitam";
+    Harga = 50000;
+    //varid = 1;
+  }
+  else if (cardNo == "1913417593103") {
+    personName = "Kaos Hitam";
+    Harga = 50000;
+    //varid = 1;
+  }
+  else if (cardNo == "19513217593181") {
+    personName = "Celana Sport";
+    Harga = 60000;
+    //varid = 4;
+  }
+  else if (cardNo == "22715617593141") {
+    personName = "Celana Sport";
+    Harga = 60000;
+    //varid = 4;
+  }
+  else if (cardNo == "21116217593131") {
+    personName = "Legging";
+    Harga = 75000;
+    //varid = 4;
+  }
+  else if (cardNo == "19513817593187") {
+    personName = "Legging";
+    Harga = 75000;
+    //varid = 4;
+  }
+  else personName = "UNKNOWN";
+  return personName;
+}

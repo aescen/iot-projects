@@ -1,0 +1,30 @@
+{
+  "cwd": "D:\\UserFiles\\AshadiPutra\\Stuff\\Final-Projects\\Codes\\Endog\\apk",
+  "type": [
+    "cordova"
+  ],
+  "name": "Kualitas Telur",
+  "pkg": "id.ac.plnm.monitoring.kualitastelur",
+  "framework": "core",
+  "template": "blank",
+  "bundler": false,
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

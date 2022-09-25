@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Monitor Level UV</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+	<!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="panel panel-left panel-cover">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="title left">Menu</div>
+			</div>
+		</div>
+        <div class="list links-list left">
+			<ul>
+				<li><a href="/about/" class="panel-close">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons">info_circle</i></div>
+							<div class="item-inner">
+								<div class="item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="page">
+		
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link panel-open">
+						<i class="f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="title center">Monitor Level UV</div>
+				<div class="right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="page-content">
+			<!-- Scrollable page content -->
+			<div class="my-scrolling-content ptr-watch-scrollable">
+				<!-- Node 1 -->
+				<div id="cardContent">
+					<div class="card">
+					  <div class="card-header"><strong>Node 01</strong></div>
+					  <div class="card-content">
+						<div class="list media-list">
+						  <ul>
+							<li class="item-content">
+							  <div class="item-media" id="imgHumid1"><img src="./img/humid-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Humidity</div>
+								</div>
+								<div class="item-subtitle" id="humidity1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgTemp1"><img src="./img/temp-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Temperature</div>
+								</div>
+								<div class="item-subtitle" id="temperature1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUV1"><img src="./img/uv-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Level</div>
+								</div>
+								<div class="item-subtitle" id="uvLevel1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUVIntensity1"><img src="./img/uvintensity-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Intensity</div>
+								</div>
+								<div class="item-subtitle" id="uvIntensity1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUVLambda1"><img src="./img/uvlambda-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Lambda</div>
+								</div>
+								<div class="item-subtitle" id="uvLambda1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgLux1"><img src="./img/lux-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Lux Level</div>
+								</div>
+								<div class="item-subtitle" id="luxLevel1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgFan1"><img src="./img/fan-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Fan</div>
+								</div>
+								<div class="item-subtitle" id="fan1"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgLamp1"><img src="./img/lamp-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Lamp</div>
+								</div>
+								<div class="item-subtitle" id="lamp1"></div>
+							  </div>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+				
+				<!-- Node 2 -->
+				<div id="cardContent">
+					<div class="card">
+					  <div class="card-header"><strong>Node 02</strong></div>
+					  <div class="card-content">
+						<div class="list media-list">
+						  <ul>
+							<li class="item-content">
+							  <div class="item-media" id="imgHumid2"><img src="./img/humid-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Humidity</div>
+								</div>
+								<div class="item-subtitle" id="humidity2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgTemp2"><img src="./img/temp-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Temperature</div>
+								</div>
+								<div class="item-subtitle" id="temperature2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUV2"><img src="./img/uv-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Level</div>
+								</div>
+								<div class="item-subtitle" id="uvLevel2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUVIntensity2"><img src="./img/uvintensity-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Intensity</div>
+								</div>
+								<div class="item-subtitle" id="uvIntensity2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgUVLambda2"><img src="./img/uvlambda-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">UV Lambda</div>
+								</div>
+								<div class="item-subtitle" id="uvLambda2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgLux2"><img src="./img/lux-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Lux Level</div>
+								</div>
+								<div class="item-subtitle" id="luxLevel2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgFan2"><img src="./img/fan-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Fan</div>
+								</div>
+								<div class="item-subtitle" id="fan2"></div>
+							  </div>
+							</li>
+							<li class="item-content">
+							  <div class="item-media" id="imgLamp2"><img src="./img/lamp-grey.png" width="44"/></div>
+							  <div class="item-inner">
+								<div class="item-title-row">
+								  <div class="item-title">Lamp</div>
+								</div>
+								<div class="item-subtitle" id="lamp2"></div>
+							  </div>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+			 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Path to your app js-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">
+	function randomInt(min, max){return Math.random() * (max - min) + min;}
+	app.preloader.show();
+	window.setInterval(function () {
+	  //do something
+	  loadJSONNode1();
+	}, 1987);
+	window.setInterval(function () {
+	  //do something
+	  loadJSONNode2();
+	}, 2123);
+	</script>
+  </body>
+</html>

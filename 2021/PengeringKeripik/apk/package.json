@@ -1,0 +1,37 @@
+{
+  "name": "monitor-pengering-keripik",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monitor Pengering Keripik",
+  "repository": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "install": "npm install && npm run postinstall && cd cordova && npm install",
+    "clean": "del /f/s/q node_modules > nul && rmdir /s/q node_modules > nul && cd cordova && del /f/s/q node_modules > nul && rmdir /s/q node_modules > nul",
+    "start": "npm run serve",
+    "serve": "http-server ./www/ -o -c 1 -a localhost -p 8080",
+    "build-cordova": "framework7 assets --skipUpdate && node ./build/build.js && cd cordova && cordova build",
+    "build-clean": "cd cordova/platforms/android/app && del /f/s/q build > nul && rmdir /s/q build > nul",
+    "postinstall": "cpy ./node_modules/framework7-icons/fonts/*.* ./www/fonts/"
+  },
+  "browserslist": [
+    "Android >= 7",
+    "IOS >= 11",
+    "Safari >= 11",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "dependencies": {
+    "dom7": "^2.1.5",
+    "framework7": "^5.7.14",
+    "framework7-icons": "^4.0.2",
+    "template7": "^1.4.2"
+  },
+  "devDependencies": {
+    "cpy": "^8.1.2",
+    "cpy-cli": "^3.1.1",
+    "http-server": "^0.12.3",
+    "rimraf": "^3.0.2"
+  }
+}

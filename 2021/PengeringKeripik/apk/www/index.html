@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+
+  <meta name="theme-color" content="#007aff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Monitor Pengering Keripik</title>
+  
+  
+  
+  
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas">
+      <div class="page" data-name="home">
+        <div class="page-content ptr-content">
+          <div class="ptr-preloader">
+            <div class="preloader"></div>
+            <div class="ptr-arrow"></div>
+          </div>
+
+          <div class="app-background">
+
+            <div class="top-bar"></div>
+            <div class="top-bar-text">
+              <p>Aplikasi Monitoring Rak Pengering Keripik Singkong</p>
+            </div>
+
+            <!-- RAK 1 -->
+            <div class="rack1-box"></div>
+            <div class="rack1-text">
+              <p>Rak 1</p>
+            </div>
+            <div class="temp1-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/temperatur.png">
+            </div>
+            <div class="weight1-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/timbangan.png">
+            </div>
+            <div class="temp1-text-box"></div>
+            <div class="temp1-text">
+              <p>Temperature</p>
+            </div>
+            <div class="temp1-value-box"></div>
+            <div class="temp1-value">
+              <p id="val-temp1">_</p>
+            </div>
+            <div class="weight1-text-box"></div>
+            <div class="weight1-text">
+              <p>Berat Loyang</p>
+            </div>
+            <div class="weight1-value-box"></div>
+            <div class="weight1-value">
+              <p id="val-weight1">_</p>
+            </div>
+            <div class="line1"></div>
+            <div class="cassava1-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/cassava.png">
+            </div>
+            <div class="cassava1-status-box"></div>
+            <div class="cassava1-status">
+              <p>Status</p>
+            </div>
+            <div class="cassava1-value-box"></div>
+            <div class="cassava1-value">
+              <p id="val-cassava1">_</p>
+            </div>
+
+
+            <!-- RAK 2 -->
+            <div class="rack2-box"></div>
+            <div class="rack2-text">
+              <p>Rak 2</p>
+            </div>
+            <div class="temp2-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/temperatur.png">
+            </div>
+            <div class="weight2-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/timbangan.png">
+            </div>
+            <div class="temp2-text-box"></div>
+            <div class="temp2-text">
+              <p>Temperature</p>
+            </div>
+            <div class="temp2-value-box"></div>
+            <div class="temp2-value">
+              <p id="val-temp2">_</p>
+            </div>
+            <div class="weight2-text-box"></div>
+            <div class="weight2-text">
+              <p>Berat Loyang</p>
+            </div>
+            <div class="weight2-value-box"></div>
+            <div class="weight2-value">
+              <p id="val-weight2">_</p>
+            </div>
+            <div class="line2"></div>
+            <div class="cassava2-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/cassava.png">
+            </div>
+            <div class="cassava2-status-box"></div>
+            <div class="cassava2-status">
+              <p>Status</p>
+            </div>
+            <div class="cassava2-value-box"></div>
+            <div class="cassava2-value">
+              <p id="val-cassava2">_</p>
+            </div>
+
+
+            <!-- RAK 3 -->
+            <div class="rack3-box"></div>
+            <div class="rack3-text">
+              <p>Rak 3</p>
+            </div>
+            <div class="temp3-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/temperatur.png">
+            </div>
+            <div class="weight3-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/timbangan.png">
+            </div>
+            <div class="temp3-text-box"></div>
+            <div class="temp3-text">
+              <p>Temperature</p>
+            </div>
+            <div class="temp3-value-box"></div>
+            <div class="temp3-value">
+              <p id="val-temp3">_</p>
+            </div>
+            <div class="weight3-text-box"></div>
+            <div class="weight3-text">
+              <p>Berat Loyang</p>
+            </div>
+            <div class="weight3-value-box"></div>
+            <div class="weight3-value">
+              <p id="val-weight3">_</p>
+            </div>
+            <div class="line3"></div>
+            <div class="cassava3-icon">
+              <img width="100%" height="100%" alt="cassava" src="./assets/cassava.png">
+            </div>
+            <div class="cassava3-status-box"></div>
+            <div class="cassava3-status">
+              <p>Status</p>
+            </div>
+            <div class="cassava3-value-box"></div>
+            <div class="cassava3-value">
+              <p id="val-cassava3">_</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- CORDOVA_PLACEHOLDER_DONT_REMOVE -->
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+  <!-- Cordova APIs -->
+  <script src="js/cordova-app.js"></script>
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+  <!-- Firebase scripts -->
+  <script src="js/firebase-app.js"></script>
+  <script src="js/firebase-auth.js"></script>
+  <script src="js/firebase-database.js"></script>
+  <script src="js/firebase-analytics.js"></script>
+  <!-- App scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

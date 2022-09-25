@@ -1,0 +1,48 @@
+<template>
+  <div class="page" data-name="cart">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="title">Cart</div>
+      </div>
+    </div>
+    <div class="page-content">
+
+      <ul>
+        ${products.value.map((product) => $h`
+          <li>
+            <div class="card">
+              <div class="card-content">
+                <div class="list media-list no-ios-edges">
+                  <ul>
+                    <a class="link" href="/product/${product.id}/">
+                      <li class="item-content">
+                        <div class="item-media">
+                          <img id="product-img" src="${product.img}" width="44" />
+                        </div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div id="product-name" class="item-title">${product.title}</div>
+                          </div>
+                          <div id="product-count" class="item-subtitle">${product.count}x</div>
+                        </div>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        `)}
+      </ul>
+
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, { $store }) => {
+    const products = $store.getters.products;
+    return $render;
+  }
+
+</script>

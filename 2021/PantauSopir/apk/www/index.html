@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+
+  <meta name="theme-color" content="#007aff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Pantau Sopir</title>
+  
+  
+  
+  
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas">
+      <div class="page" data-name="home">
+        <div class="page-content ptr-content">
+          <div class="ptr-preloader">
+            <div class="preloader"></div>
+            <div class="ptr-arrow"></div>
+          </div>
+
+          <div class="app-background">
+            <div class="top-bar"></div>
+            <div class="top-bar-text">
+              <p>Monitoring Kondisi Sopir</p>
+            </div>
+
+            <!-- DRIVER 1 -->
+            <div class="rack1-box"></div>
+            <div class="rack1-text">
+              <p>Sopir 1</p>
+            </div>
+            <div class="driver1-img">
+              <img width="100%" height="100%" alt="box" src="./assets/driver1.png">
+            </div>
+            <div class="line1"></div>
+            <div class="beat1-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="beat1-box-text">Denyut:</div>
+            <div class="beat1-box-value" id="val-jantung1">...</div>
+            <div class="oxy1-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="oxy1-box-text">Oksigen:</div>
+            <div class="oxy1-box-value" id="val-oksigen1">...</div>
+            
+
+            <!-- DRIVER 2 -->
+            <div class="rack2-box"></div>
+            <div class="rack2-text">
+              <p>Sopir 2</p>
+            </div>
+            <div class="driver2-img">
+              <img width="100%" height="100%" alt="box" src="./assets/driver2.png">
+            </div>
+            <div class="line2"></div>
+            <div class="beat2-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="beat2-box-text">Denyut:</div>
+            <div class="beat2-box-value" id="val-jantung2">...</div>
+            <div class="oxy2-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="oxy2-box-text">Oksigen:</div>
+            <div class="oxy2-box-value" id="val-oksigen2">...</div>
+            
+
+            <!-- DRIVER 3 -->
+            <div class="rack3-box"></div>
+            <div class="rack3-text">
+              <p>Sopir 3</p>
+            </div>
+            <div class="driver3-img">
+              <img width="100%" height="100%" alt="box" src="./assets/driver3.png">
+            </div>
+            <div class="line3"></div>
+            <div class="beat3-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="beat3-box-text">Denyut:</div>
+            <div class="beat3-box-value" id="val-jantung3">...</div>
+            <div class="oxy3-box">
+              <img width="100%" height="100%" alt="box" src="./assets/box.png">
+            </div>
+            <div class="oxy3-box-text">Oksigen:</div>
+            <div class="oxy3-box-value" id="val-oksigen3">...</div>
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- CORDOVA_PLACEHOLDER_DONT_REMOVE -->
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+  <!-- Cordova APIs -->
+  <script src="js/cordova-app.js"></script>
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+  <!-- Firebase scripts -->
+  <script src="js/firebase-app.js"></script>
+  <script src="js/firebase-auth.js"></script>
+  <script src="js/firebase-database.js"></script>
+  <script src="js/firebase-analytics.js"></script>
+  <!-- App scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

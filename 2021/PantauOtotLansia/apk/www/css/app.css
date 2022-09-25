@@ -1,0 +1,140 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Your app custom styles here */
+
+/* APLIKASI MONITORING KEKAKUAN OTOT */
+
+/* Android - 1 */
+.app-background {
+  position: relative;
+  width: 100vw;
+  height: 18vh;
+
+  background: #f2dd21;
+}
+
+.text-banner-top {
+  position: absolute;
+  width: 100vw;
+  height: 18vh;
+  left: 0;
+  right: 0;
+  top: 0px;
+
+  /* font-family: NovaMono; */
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Background */
+.app-background-bottom {
+  position: absolute;
+  width: 100vw;
+  height: 84vh;
+  max-width: 100vw;
+  max-height: 84vh;
+  left: 0;
+  right: 0;
+  top: 18vh;
+  opacity: 0.5;
+}
+
+/* Rectangle 0 */
+
+.display-container0 {
+  position: absolute;
+  width: 40.8333vw;
+  height: 32vw;
+  left: 28.05556vw;
+  top: 23.28vh;
+}
+
+/* Frek */
+.display-text0 {
+  position: relative;
+  display: inline;
+  top: -10.3vh;
+  right: 12.5vw;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 23px;
+  align-items: right;
+  text-align: right;
+
+  color: #000000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Rectangle 1 */
+
+.display-container1 {
+  position: absolute;
+  width: 40.8333vw;
+  height: 27.8125vh;
+  left: 28.05556vw;
+  top: 46.3125vh;
+}
+
+/* 12000 */
+.display-text1 {
+  position: relative;
+  display: inline;
+  top: -10vh;
+  right: 1vw;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 23px;
+  align-items: right;
+  text-align: right;
+
+  color: #000000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Rectangle 2 */
+
+.button-status {
+  position: absolute;
+  width: 87.22vw;
+  height: 14.21875vh;
+  left: 6vw;
+  top: 80.3125vh;
+}
+
+/* Status */
+.button-text {
+  position: relative;
+  display: inline;
+  top: -13.5vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}

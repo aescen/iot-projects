@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Walet Monitoring</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="panel panel-left panel-cover">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="title left">Menu</div>
+			</div>
+		</div>
+    <div class="list links-list left">
+			<ul>
+				<li><a href="#" class="panel-close link back">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons left">home</i></div>
+							<div class="item-inner">
+								<div class="item-title">Main</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li><a href="/about/" class="panel-close">
+						<div class="item-content">
+							<div class="item-media"><i class="f7-icons left">info_round</i></div>
+							<div class="item-inner">
+								<div class="item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="page">
+		
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link panel-open">
+						<i class="f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="title center">Walet Monitoring</div>
+				<div class="right"></div>
+            </div>
+          </div>
+			<!-- Toolbar -->
+			<div class="toolbar tabbar toolbar-bottom">
+				<div class="toolbar-inner">
+				  <a href="#tab1" class="tab-link tab-link-active">Monitor</a>
+				  <a href="#tab2" class="tab-link">Temp</a>
+				  <a href="#tab3" class="tab-link">Humid</a>
+				  <a href="#tab4" class="tab-link">Total</a>
+				</div>
+				
+			</div>	
+			<!-- Tabs wrapper, shoud have "tabs" class. Required element -->
+			<div class="tabs-swipeable-wrap">
+				<div class="tabs tabs-bottom">
+					<!-- First tab, should have "tab" class and unique id attribute -->
+					<!-- First tab is active by default - additional "tab-active" class -->
+					<div class="page-content ptr-content tab tab-active" id="tab1" name="tab1">
+						<div class="ptr-preloader">
+							<div class="preloader"></div>
+							<div class="ptr-arrow"></div>
+						</div>
+						<!-- Scrollable page content -->
+						<div class="my-scrolling-content ptr-watch-scrollable">
+							<div id="cardContent">
+								<!-- Card view for cosensor data 1-->
+								<div class="card card-outline">
+								  <div class="card-header">Humidity</div>
+								  <div class="card-content">
+									<!-- Card content -->
+								  </div>
+								  <div class="card-footer" id="humid"></div>
+								</div>
+								<!-- Card view for cosensor data 2-->
+								<div class="card card-outline">
+								  <div class="card-header">Temperature</div>
+								  <div class="card-content">
+									<!-- Card content -->
+								  </div>
+								  <div class="card-footer" id="temp"></div>
+								</div>
+								<!-- Card view for cosensor data 3-->
+								<div class="card card-outline">
+								  <div class="card-header">Total Birds</div>
+								  <div class="card-content">
+									<!-- Card content -->
+								  </div>
+								  <div class="card-footer" id="total"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				  <!-- Second tab, should have "tab" class and unique id attribute -->
+				  <div class="page-content tab" id="tab2" name="tab2">
+					<!-- Table title -->
+					<div class="card card-outline">
+					  <div class="card-content">
+						<!-- Card content -->
+						<div class="data-table">
+							<table>
+								<thead>
+									<tr>
+										<th class="label-cell">Timestamp</th>
+										<th class="numeric-cell">Value</th>
+									</tr>
+								</thead>
+								<tbody id="tempLog" name="tempLog">
+								</tbody>
+							</table>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <!-- Third tab, should have "tab" class and unique id attribute -->
+				  <div class="page-content tab" id="tab3" name="tab3">
+					<!-- Table title -->
+					<div class="card card-outline">
+					  <div class="card-content">
+						<!-- Card content -->
+						<div class="data-table">
+							<table>
+								<thead>
+									<tr>
+										<th class="label-cell">Timestamp</th>
+										<th class="numeric-cell">Value</th>
+									</tr>
+								</thead>
+								<tbody id="humidLog" name="humidLog">
+								</tbody>
+							</table>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <!-- Fourth tab, should have "tab" class and unique id attribute -->
+				  <div class="page-content tab" id="tab4" name="tab4">
+					<!-- Table title -->
+					<div class="card card-outline">
+					  <div class="card-content">
+						<!-- Card content -->
+						<div class="data-table">
+							<table>
+								<thead>
+									<tr>
+										<th class="label-cell">Timestamp</th>
+										<th class="numeric-cell">Value</th>
+									</tr>
+								</thead>
+								<tbody id="totalLog" name="totalLog">
+								</tbody>
+							</table>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<!-- Full preloader layout for MD theme -->
+			<div class="preloader">
+			  <span class="preloader-inner">
+				<span class="preloader-inner-gap"></span>
+				<span class="preloader-inner-left">
+					<span class="preloader-inner-half-circle"></span>
+				</span>
+				<span class="preloader-inner-right">
+					<span class="preloader-inner-half-circle"></span>
+				</span>
+			  </span>
+			</div>			
+        </div>
+      </div>
+    </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script type="text/javascript" src="./js/firebase-app.js"></script>
+	<!-- Add additional services that you want to use -->
+	<script type="text/javascript" src="./js/firebase-auth.js"></script>
+	<script type="text/javascript" src="./js/firebase-database.js"></script>
+	<!-- Path to your app jss-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">app.preloader.show();refOnce();</script>
+  </body>
+</html>

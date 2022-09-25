@@ -1,0 +1,64 @@
+
+{
+  "amplitudo": 12,
+  "frekuensi": 432,
+  "kode": 1,
+  "listNama": [
+    {
+      "id": 0,
+      "name": "Anon"
+    },
+    {
+      "id": 1,
+      "name": "Huda"
+    },
+    {
+      "id": 2,
+      "name": "Sandro"
+    },
+    {
+      "id": 3,
+      "name": "Aulia"
+    },
+    {
+      "id": 4,
+      "name": "Latanza"
+    },
+    {
+      "id": 5,
+      "name": "Riza"
+    },
+    {
+      "id": 6,
+      "name": "Dinda"
+    }
+  ],
+  "nama": 1,
+  "vocalCode": [
+    {
+      "id": 0,
+      "info": "Tidak diketahui",
+      "name": "na"
+    },
+    {
+      "id": 1,
+      "info": "Soprano / wanita",
+      "name": "soprano"
+    },
+    {
+      "id": 2,
+      "info": "Alto / wanita",
+      "name": "alto"
+    },
+    {
+      "id": 3,
+      "info": "Bass / pria",
+      "name": "bass"
+    },
+    {
+      "id": 4,
+      "info": "Tenor / pria",
+      "name": "tenor"
+    }
+  ]
+}

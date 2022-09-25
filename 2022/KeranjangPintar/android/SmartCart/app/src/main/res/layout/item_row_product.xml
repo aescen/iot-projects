@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:layout_marginHorizontal="4dp"
+  android:layout_marginVertical="4dp"
+  card_view:cardCornerRadius="4dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+      android:id="@+id/im_main_item_photo"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:contentDescription="@string/product_image"
+      card_view:layout_constraintBottom_toBottomOf="parent"
+      card_view:layout_constraintEnd_toStartOf="@id/tv_main_product_name"
+      card_view:layout_constraintStart_toStartOf="parent"
+      card_view:layout_constraintTop_toTopOf="parent"
+      tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+      android:id="@+id/tv_main_product_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:fontFamily="sans-serif-condensed-medium"
+      android:gravity="start"
+      android:textColor="?attr/textColor"
+      android:textSize="24sp"
+      android:textStyle="italic"
+      card_view:layout_constraintBottom_toTopOf="@id/tv_main_product_price"
+      card_view:layout_constraintEnd_toEndOf="parent"
+      card_view:layout_constraintStart_toEndOf="@+id/im_main_item_photo"
+      card_view:layout_constraintTop_toTopOf="parent"
+      tools:text="Product" />
+
+    <TextView
+      android:id="@+id/tv_main_product_price"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="sans-serif-condensed"
+      android:gravity="start"
+      android:textColor="?attr/textColor"
+      android:textSize="18sp"
+      card_view:layout_constraintStart_toStartOf="@+id/tv_main_product_name"
+      card_view:layout_constraintTop_toBottomOf="@id/tv_main_product_name"
+      tools:text="price" />
+
+    <TextView
+      android:id="@+id/tv_main_product_quantity"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:fontFamily="sans-serif-condensed"
+      android:gravity="start"
+      android:textColor="?attr/textColor"
+      android:textSize="14sp"
+      card_view:layout_constraintStart_toStartOf="@+id/tv_main_product_name"
+      card_view:layout_constraintTop_toBottomOf="@id/tv_main_product_price"
+      tools:text="quantity" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

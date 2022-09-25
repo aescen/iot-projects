@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Data Streams</title>
+  </head>
+  <body>
+    <h1>Data Stream Test: {{ url_for('apiStream') }}</h1>
+    <p>Data:</p>
+    <p id="data">nothing received yet</p>
+    <img id="image"/>
+  </body>
+</html>
+<script>
+  const ws = new WebSocket("ws://localhost:9000");
+  const image = document.getElementById('image');
+  let imageData = '';
+  ws.onmessage = (packet) => {
+    try {
+      const payload = JSON.parse(packet.data);
+      if (payload.count > 1) {
+        imageData += payload.segment;
+      } else {
+        imageData += payload.segment;
+        const jpg = 'data:image/jpg;base64,' + imageData;
+        image.src = jpg;
+        imageData = '';
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  const stream = new EventSource("{{ url_for('apiStream') }}");
+  stream.onmessage = (ev) => {
+    try {
+      const dat = JSON.parse(ev.data);
+      //console.info(dat);
+      document.getElementById('data').innerHTML = JSON.stringify(dat, null, 2);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+</script>

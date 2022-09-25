@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/om_name"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:paddingBottom="4dp"
+        android:layout_alignParentLeft="true"
+        android:text="Who@0.0.0.0"
+        android:textColor="@android:color/tertiary_text_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="left"
+        android:id="@+id/om_message_body"
+        android:background="@drawable/other_message"
+        android:textColor="#111"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:textSize="18dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/placeholder_message"
+        android:layout_below="@id/om_name"/>
+
+</LinearLayout>

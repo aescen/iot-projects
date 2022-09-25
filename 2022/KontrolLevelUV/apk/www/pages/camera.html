@@ -1,0 +1,61 @@
+<template>
+  <div class="page" data-name="camera">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title" style="margin-left:0px;">Camera</div>
+      </div>
+    </div>
+    <div class="page-content">
+      
+      <div class="card">
+        <div class="card-header">Video</div>
+        <div id="camera-container" class="card-content card-content-padding text-align-center">
+          <img id="camera-stream" src="./assets/404.png"
+            alt="Camera Stream" style="width:82vw;" onerror="setErrorImage(this)" />
+        </div>
+        <div class="card-footer">Suhu : <span id="temp" name="temp">...</span></div>
+        <div class="card-footer">Kelembapan : <span id="humid" name="humid">...</span></div>
+        <div class="card-footer">Jumlah Orang : <span id="total-detection" name="total-detection">...</span></div>
+        <div class="card-footer">Daya : <span id="total-power" name="total-power">...</span></div>
+      </div>
+      
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, {$, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) => {
+    $f7.preloader.hide();
+    clearTimeout(props.waitPage);
+
+    $on('pageInit', () => {
+      refreshImagesStream();
+      
+      /*let imageData = '';
+      const ws = new WebSocket("ws://localhost:9000");
+      
+      ws.onmessage = (packet) => {
+        try {
+          const payload = JSON.parse(packet.data);
+          if (payload.count > 1) {
+            imageData += payload.segment;
+          } else {
+            imageData += payload.segment;
+            $('#camera-stream').attr('src', 'data:image/jpg;base64,' + imageData);
+            imageData = '';
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      };*/
+    });
+    // Return render function
+    return $render;
+  }
+</script>

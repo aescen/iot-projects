@@ -1,0 +1,122 @@
+<template>
+  <div class="page" data-name="logs">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title" style="margin-left:0px;">Logs</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="card">
+        <div class="card-header">Date</div>
+        <div class="card-content card-content-padding text-align-center">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-input-wrap">
+                      <input type="text" placeholder="Select date" readonly="readonly" id="logs-date" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="data-table data-table-init card">
+        <!-- Card Content -->
+        <div class="card-content">
+          <table id="logs-table" name="logs-table">
+            <thead>
+              <tr>
+                <th class="label-cell">Waktu</th>
+                <th class="numeric-cell">Total Deteksi</th>
+                <th class="numeric-cell">Total Riskan</th>
+              </tr>
+            </thead>
+            ${logsData.map(log => $h`
+              <tbody>
+                <tr>
+                  <td class="label-cell">${newDate(log.id).datetime}</td>
+                  <td class="numeric-cell">${log.person}</td>
+                  <td class="numeric-cell">${log.risky_distance}</td>
+                </tr>
+              </tbody>
+            `)}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default (props, {$, $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) => {
+    clearTimeout(props.waitPage);
+    let logsData = [];
+    const tableHead = '' +
+      '<thead>' +
+      ' <tr>' +
+      '   <th class="label-cell">Waktu</th>' +
+      '   <th class="numeric-cell">Lux LED</th>' +
+      '   <th class="numeric-cell">Suhu</th>' +
+      '   <th class="numeric-cell">Kelembapan</th>' +
+      '   <th class="numeric-cell">UV Matahari</th>' +
+      '   <th class="numeric-cell">UV Ruangan</th>' +
+      ' </tr>' +
+      '</thead>';
+
+    const updateTable = (logs) => {
+      const tableData = logs.map(log => {
+        if (log === null) return;
+        return '' +
+          '<tbody>' +
+          ' <tr>' +
+          '   <td class="label-cell">' + `${log.time_stamp}` + '</td>' +
+          '   <td class="label-cell">' + `${log.lux_led}` + '</td>' +
+          '   <td class="numeric-cell">' + `${log.temp}` + '&deg;C</td>' +
+          '   <td class="numeric-cell">' + `${log.humid}` + '%</td>' +
+          '   <td class="numeric-cell">' + `${log.uv_outdoor}` + '</td>' +
+          '   <td class="numeric-cell">' + `${log.uv_indoor}` + '</td>' +
+          ' </tr>' +
+          '</tbody>';
+      });
+      if (tableData !== null) $('#logs-table').html(`${tableHead}${tableData}`);
+    };
+
+    const updateLogsData = async (date) => {
+      $f7.preloader.show();
+      const data = await getLogs(date);
+      console.log(data);
+      updateTable(data);
+      $f7.preloader.hide();
+    };
+
+    updateLogsData([new Date()]);
+
+    $on('pageInit', () => {
+    const logsDate = $f7.calendar.create({
+        inputEl: '#logs-date',
+        minDate: new Date('2022-01-01'),
+        maxDate: new Date(),
+        value: [new Date()]
+      });
+      
+      logsDate.on('closed', () => {
+        if (typeof logsDate.getValue() !== 'undefined') {
+          updateLogsData(logsDate.getValue());
+        }
+      });
+    });
+
+    // Return render function
+    return $render;
+  };
+</script>

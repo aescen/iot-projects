@@ -1,0 +1,41 @@
+{
+  "name": "deteksi-jarak",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Deteksi Jarak",
+  "repository": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "http-server ./www/ -o -c 1 --cors -a localhost -p 8181",
+    "build-cordova": "framework7 assets --skipUpdate && node ./build/build.js && cd cordova && cordova build",
+    "postinstall": "cpy ./node_modules/framework7-icons/fonts/*.* ./www/fonts/ && cpy ./node_modules/material-icons/iconfont/*.* ./www/fonts/ && cpy ./node_modules/framework7/*.js ./www/framework7 && cpy ./node_modules/framework7/*.css ./www/framework7 && cpy ./node_modules/framework7/*.map ./www/framework7"
+  },
+  "browserslist": [
+    "Android >= 7",
+    "IOS >= 11",
+    "Safari >= 11",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "dependencies": {
+    "dom7": "^3.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.2",
+    "framework7": "^6.3.1",
+    "framework7-icons": "^5.0.3",
+    "material-icons": "^1.2.0",
+    "skeleton-elements": "^3.5.0",
+    "swiper": "^6.8.4"
+  },
+  "devDependencies": {
+    "cpy": "^8.1.2",
+    "cpy-cli": "^3.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "http-server": "^13.0.1",
+    "rimraf": "^3.0.2"
+  }
+}

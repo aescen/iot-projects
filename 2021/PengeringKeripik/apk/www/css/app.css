@@ -1,0 +1,808 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Your app custom styles here */
+
+/* Android - 1 */
+.app-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background: #ffffff;
+}
+
+/* Rectangle 1 */
+.top-bar {
+  position: absolute;
+  width: 100vw;
+  height: 13.28125vh;
+  left: 0px;
+  top: 0px;
+
+  background: #4b778d;
+}
+
+/* Aplikasi Monitoring Rak Pengering Keripik Singkong */
+.top-bar-text {
+  position: absolute;
+  width: 100vw;
+  height: 8.75vh;
+  left: -1vw;
+  top: -2vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  align-items: center;
+  text-align: center;
+  display: inline-table;
+
+  color: #000000;
+}
+
+/* Rectangle 14 */
+.rack1-box {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 13.28125vh;
+
+  background: #28b5b5;
+}
+
+/* RAK 01 */
+.rack1-text {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 8.58125vh;
+
+  font-family: Ramabhadra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 53px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* temperature-icon-clip-art-narrow-range-mercury-thermometer-shows-optimal-weather-95620440 1 */
+.temp1-icon {
+  position: absolute;
+  width: 32.5vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 20.3125vh;
+}
+
+/* Rectangle 5 */
+.weight1-icon {
+  position: absolute;
+  display: inline-table;
+  width: 32.5vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 31.2vh;
+}
+
+/* Rectangle 12 */
+.temp1-text-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 20.3125vh;
+
+  background: #ffffff;
+}
+
+/* Temperature */
+.temp1-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 20.78125vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 13 */
+.temp1-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 25.15625vh;
+
+  background: #ffffff;
+}
+
+/* 35 C */
+.temp1-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 25.15625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 10 */
+.weight1-text-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 31.2vh;
+
+  background: #ffffff;
+}
+
+/* Berat Loyang */
+.weight1-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 31.2vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 11 */
+.weight1-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 36.09375vh;
+
+  background: #ffffff;
+}
+
+/* 150/250/700 */
+.weight1-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 36.09375vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Line 1 */
+.line1 {
+  position: absolute;
+  width: 41.9444vw;
+  height: 0px;
+  left: 47.5vw;
+  top: 30.5vh;
+
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+}
+
+/* Cassava 1 */
+.cassava1-icon {
+  position: absolute;
+  width: 27.22222vw;
+  height: 8.59375vh;
+  left: 72.77777vw;
+  top: 21.71875vh;
+}
+
+/* Rectangle 8 */
+.cassava1-status-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 31.2vh;
+
+  background: #ffffff;
+}
+
+/* Status */
+.cassava1-status {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 31.2vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 9 */
+.cassava1-value-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 35.9375vh;
+
+  background: #ffffff;
+}
+
+/* Kosong/Matang/Proses */
+.cassava1-value {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 35.9375vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 12px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/*************************************************************************************************/
+
+/* Rectangle 14 */
+.rack2-box {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 42.1875vh;
+
+  background: #28b5b5;
+}
+
+/* RAK 02 */
+.rack2-text {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 37.4875vh;
+
+  font-family: Ramabhadra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 53px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* temperature-icon-clip-art-narrow-range-mercury-thermometer-shows-optimal-weather-95620440 1 */
+.temp2-icon {
+  position: absolute;
+  width: 32.5vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 49.21875vh;
+}
+
+/* Rectangle 5 */
+.weight2-icon {
+  position: absolute;
+  width: 32.2222vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 60.15625vh;
+}
+
+/* Temperature */
+.temp2-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 49.6875vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 13 */
+.temp2-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 54.0625vh;
+
+  background: #ffffff;
+}
+
+/* 35 C */
+.temp2-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 54.0625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 10 */
+.weight2-text-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 60.15625vh;
+
+  background: #ffffff;
+}
+
+/* Berat Loyang */
+.weight2-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 60.15625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 11 */
+.weight2-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 65vh;
+
+  background: #ffffff;
+}
+
+/* 150/250/700 */
+.weight2-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 65vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Line 2 */
+.line2 {
+  position: absolute;
+  width: 41.9444vw;
+  height: 0px;
+  left: 47.5vw;
+  top: 59.4vh;
+
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+}
+
+/* Cassava 2 */
+.cassava2-icon {
+  position: absolute;
+  width: 27.22222vw;
+  height: 8.59375vh;
+  left: 72.77777vw;
+  top: 50.625vh;
+}
+
+/* Rectangle 8 */
+.cassava2-status-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 60.15625vh;
+
+  background: #ffffff;
+}
+
+/* Status */
+.cassava2-status {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 60.15625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 9 */
+.cassava2-value-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 64.84375vh;
+
+  background: #ffffff;
+}
+
+/* Kosong/Matang/Proses */
+.cassava2-value {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 64.84375vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 12px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/********************************************************                          **************************/
+
+/* Rectangle 14 */
+.rack3-box {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 71.09375vh;
+
+  background: #28b5b5;
+}
+
+/* RAK 03 */
+.rack3-text {
+  position: absolute;
+  width: 100vw;
+  height: 5.46875vh;
+  left: 0px;
+  top: 66.49375vh;
+
+  font-family: Ramabhadra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 53px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* temperature-icon-clip-art-narrow-range-mercury-thermometer-shows-optimal-weather-95620440 1 */
+.temp3-icon {
+  position: absolute;
+  width: 32.5vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 78.128vh;
+}
+
+/* Rectangle 5 */
+.weight3-icon {
+  position: absolute;
+  width: 32.2222vw;
+  height: 9.375vh;
+  left: -1vw;
+  top: 89.0625vh;
+}
+
+/* Rectangle 12 */
+.temp3-text-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 78.128vh;
+
+  background: #ffffff;
+}
+
+/* Temperature */
+.temp3-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 78.59375vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 13 */
+.temp3-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 82.96875vh;
+
+  background: #ffffff;
+}
+
+/* 35 C */
+.temp3-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 82.96875vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 10 */
+.weight3-text-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 89.0625vh;
+
+  background: #ffffff;
+}
+
+/* Berat Loyang */
+.weight3-text {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 89.0625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 11 */
+.weight3-value-box {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.60937vh;
+  left: 31.3888vw;
+  top: 93.90625vh;
+
+  background: #ffffff;
+}
+
+/* 150/250/700 */
+.weight3-value {
+  position: absolute;
+  width: 36.6667vw;
+  height: 4.53125vh;
+  left: 31.3888vw;
+  top: 93.90625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Line 3 */
+.line3 {
+  position: absolute;
+  width: 41.9444vw;
+  height: 0px;
+  left: 47.5vw;
+  top: 88.4vh;
+
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+}
+
+/* Cassava 3 */
+.cassava3-icon {
+  position: absolute;
+  width: 27.22222vw;
+  height: 8.59375vh;
+  left: 72.77777vw;
+  top: 79.53125vh;
+}
+
+/* Rectangle 8 */
+.cassava3-status-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 89.0625vh;
+
+  background: #ffffff;
+}
+
+/* Status */
+.cassava3-status {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 89.0625vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+/* Rectangle 9 */
+.cassava3-value-box {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 93.75vh;
+
+  background: #ffffff;
+}
+
+/* Kosong/Matang/Proses */
+.cassava3-value {
+  position: absolute;
+  width: 26.1111vw;
+  height: 4.53125vh;
+  left: 72.77777vw;
+  top: 93.75vh;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 12px;
+  display: inline-table;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}

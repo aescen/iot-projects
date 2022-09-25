@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<!-- Your app title -->
+    <title>Monitor Jamur</title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
+	<!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/my-app.css">
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="./framework7/css/framework7.md.min.css">
+	<!-- Path to Framework7 Icons CSS -->
+	<link rel="stylesheet" href="./framework7/css/framework7-icons.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="color-theme-orange statusbar"></div>
+	  <!-- Panel element -->
+	  <div class="color-theme-orange panel panel-left panel-cover">
+		<div class="color-theme-orange navbar">
+			<div class="color-theme-orange navbar-inner">
+				<div class="color-theme-orange title left">Menu</div>
+			</div>
+		</div>
+        <div class="color-theme-orange list links-list left">
+			<ul>
+				<li><a href="/about/" class="color-theme-orange panel-close">
+						<div class="color-theme-orange item-content">
+							<div class="color-theme-orange item-media"><i class="color-theme-orange f7-icons">info_circle</i></div>
+							<div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title">About</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	  </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="color-theme-orange view view-main view-init">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="color-theme-orange page">
+		
+          <!-- Top Navbar -->
+          <div class="color-theme-orange navbar">
+            <div class="color-theme-orange navbar-inner">
+				<div class="color-theme-orange left">
+					<a href="#" class="color-theme-orange link panel-open">
+						<i class="color-theme-orange f7-icons">menu</i>
+					</a>
+				</div>
+				<div class="color-theme-orange title center">Monitor Jamur</div>
+				<div class="color-theme-orange right"></div>
+            </div>
+          </div>
+
+          <!-- Page content -->
+          <div class="color-theme-orange page-content ptr-content">
+			<div class="color-theme-orange ptr-preloader">
+				<div class="color-theme-orange preloader"></div>
+				<div class="color-theme-orange ptr-arrow"></div>
+			</div>
+			<!-- Scrollable page content -->
+			<div class="color-theme-orange my-scrolling-content ptr-watch-scrollable">
+				<!-- Node 1 -->
+				<div id="cardContent">
+					<div class="color-theme-orange card">
+					  <div class="color-theme-orange card-content">
+						<div class="color-theme-orange list media-list">
+						  <ul>
+							<li class="color-theme-orange item-content">
+							  <div class="color-theme-orange item-media" id="imgDensity"><img src="./img/density-grey.png" width="44"/></div>
+							  <div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title-row">
+								  <div class="color-theme-orange item-title">Density</div>
+								</div>
+								<div class="color-theme-orange item-subtitle" id="density">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-orange item-content">
+							  <div class="color-theme-orange item-media" id="imgHumid"><img src="./img/humid-grey.png" width="44"/></div>
+							  <div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title-row">
+								  <div class="color-theme-orange item-title">Humidity</div>
+								</div>
+								<div class="color-theme-orange item-subtitle" id="humidity">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-orange item-content">
+							  <div class="color-theme-orange item-media" id="imgTemp"><img src="./img/temp-grey.png" width="44"/></div>
+							  <div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title-row">
+								  <div class="color-theme-orange item-title">Temperature</div>
+								</div>
+								<div class="color-theme-orange item-subtitle" id="temperature">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-orange item-content">
+							  <div class="color-theme-orange item-media" id="imgSoilPh"><img src="./img/soil-ph-grey.png" width="44"/></div>
+							  <div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title-row">
+								  <div class="color-theme-orange item-title">Soil pH Level</div>
+								</div>
+								<div class="color-theme-orange item-subtitle" id="soilPhLevel">...</div>
+							  </div>
+							</li>
+							<li class="color-theme-orange item-content">
+							  <div class="color-theme-orange item-media" id="imgWaterPh"><img src="./img/water-ph-grey.png" width="44"/></div>
+							  <div class="color-theme-orange item-inner">
+								<div class="color-theme-orange item-title-row">
+								  <div class="color-theme-orange item-title">Water pH Level</div>
+								</div>
+								<div class="color-theme-orange item-subtitle" id="waterPhLevel">...</div>
+							  </div>
+							</li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+				
+			 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Path to main app JS -->
+	<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+	<!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="./framework7/js/framework7.min.js"></script>
+	<!-- Firebase App is always required and must be first -->
+	<script type="text/javascript" src="./js/firebase-app.js"></script>
+	<!-- Add additional services that you want to use -->
+	<script type="text/javascript" src="./js/firebase-auth.js"></script>
+	<script type="text/javascript" src="./js/firebase-database.js"></script>
+	<!-- Path to your app JS-->
+	<script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript">app.preloader.show();refOnce();</script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.ycmlg.absensisiswa">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:allowTaskReparenting="true"
+        android:appCategory="productivity"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".main.chat.ChatProfileActivity"/>
+        <activity android:name=".main.chat.ChatNotificationActivity" />
+        <activity android:name=".main.chat.ChatFriendProfileActivity" />
+        <activity android:name=".main.chat.ChatAddContactActivity" />
+        <activity android:name=".main.chat.ChatMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".main.chat.ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".SplashActivity"
+            android:alwaysRetainTaskState="false"
+            android:autoRemoveFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainGuruActivity"
+            android:autoRemoveFromRecents="false"
+            android:label="@string/title_activity_main_guru"
+            android:launchMode="singleTop"
+            android:persistent="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainOrtuActivity"
+            android:autoRemoveFromRecents="false"
+            android:label="@string/title_activity_main_ortu"
+            android:launchMode="singleTop"
+            android:persistent="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.guru.home.KelasActivity"
+            android:label="@string/title_activity_kelas"
+            android:parentActivityName=".main.MainGuruActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.MainGuruActivity" />
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".test.NFCTestActivity"
+            android:label="Test NFC" />
+
+        <service
+            android:name=".main.chat.chatservices.AppService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false"
+            android:directBootAware="true"/>
+
+        <receiver
+            android:name=".main.chat.chatservices.AppReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="id.ycmlg.absensisiswa.main.chat.restartservice" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

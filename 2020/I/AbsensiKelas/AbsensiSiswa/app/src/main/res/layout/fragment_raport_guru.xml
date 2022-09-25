@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.guru.home.menukelas.raport.GuruRaportFragment">
+    
+    <TextView
+        android:id="@+id/tv_raport_guru"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_title_frag"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingVertical="6dp"
+        android:background="@color/bg_gray"
+        android:textAppearance="@style/title_fragment"
+        android:text="@string/raport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/border_raport_guru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundrect"
+        android:padding="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_induk"
+            android:textAppearance="@style/biodata_diri_subtitle"
+            android:labelFor="@id/ed_no_induk_raport_guru"/>
+
+        <EditText
+            android:id="@+id/ed_no_induk_raport_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/list_content"
+            android:background="@null"
+            android:autofillHints="@string/nis_disini"
+            android:inputType="number" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/line"
+            android:contentDescription="@string/line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/subtitle_nama_lengkap"
+            android:textAppearance="@style/biodata_diri_subtitle"/>
+
+        <TextView
+            android:id="@+id/tv_nama_lengkap_raport_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/list_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/line"
+            android:contentDescription="@string/line" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_upload_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/upload_file"
+        android:textStyle="bold"
+        android:textAppearance="@style/label_rect_big"
+        app:layout_constraintTop_toBottomOf="@id/border_raport_guru"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="0dp"
+        android:text="@string/pdf"
+        android:textStyle="italic"
+        android:textAppearance="@style/label_rect_big"
+        app:layout_constraintTop_toBottomOf="@id/border_raport_guru"
+        app:layout_constraintStart_toEndOf="@id/tv_upload_file" />
+
+    <EditText
+        android:id="@+id/ed_upload_file_raport_guru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rect_big"
+        android:scrollbars="vertical"
+        android:textIsSelectable="false"
+        android:enabled="false"
+        android:inputType="none"
+        android:verticalScrollbarPosition="right"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upload_file"/>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfview_raport_guru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rect_big"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upload_file"/>
+
+
+    <ImageButton
+        android:id="@+id/ib_add_raport_guru"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_add"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/ed_upload_file_raport_guru"
+        app:layout_constraintStart_toStartOf="@id/ed_upload_file_raport_guru"
+        app:layout_constraintBottom_toBottomOf="@id/ed_upload_file_raport_guru"
+        app:layout_constraintEnd_toEndOf="@id/ed_upload_file_raport_guru"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_send"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_upload_file_raport_guru"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ib_send_raport_guru"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_send"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/pdfview_raport_guru"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <include
+        android:id="@+id/pb_ll_raport_guru"
+        layout="@layout/progress_bar"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

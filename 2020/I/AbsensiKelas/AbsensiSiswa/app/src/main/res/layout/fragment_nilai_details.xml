@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.guru.home.menukelas.nilaiakademik.NilaiDetailsFragment">
+
+    <TextView
+        android:id="@+id/tv_title_mata_pelajaran_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_title_frag"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingVertical="6dp"
+        android:background="@color/bg_gray"
+        android:textAppearance="@style/title_fragment"
+        android:text="@string/mata_pelajaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/iv_bt_edit_mata_pelajaran_edit"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_edit"
+        android:contentDescription="@string/desc_button_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_mata_pelajaran_edit"/>
+
+    <ImageButton
+        android:id="@+id/iv_bt_send_mata_pelajaran_edit"
+        android:layout_width="@dimen/size_button"
+        android:layout_height="@dimen/size_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_send"
+        android:contentDescription="@string/desc_button_check"
+        app:layout_constraintStart_toEndOf="@id/iv_bt_edit_mata_pelajaran_edit"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_mata_pelajaran_edit"/>
+
+    <TextView
+        android:id="@+id/tv_label_subjek_nilai_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#000000"
+        android:text="@string/subjek_t"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bt_edit_mata_pelajaran_edit"/>
+
+    <TextView
+        android:id="@+id/tv_subjek_nilai_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#FF3D00"
+        android:text="TA.19-20/S.1/K.1A/T.1/ST.1/P.1/TG.1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tv_label_subjek_nilai_edit"
+        app:layout_constraintTop_toBottomOf="@id/iv_bt_edit_mata_pelajaran_edit"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/underline_subjek_nilai_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line"
+        app:layout_constraintTop_toBottomOf="@id/tv_subjek_nilai_edit"
+        app:layout_constraintStart_toEndOf="@id/tv_label_subjek_nilai_edit"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/underline_subjek_nilai_edit">
+        <HorizontalScrollView
+            android:id="@+id/hsv_tabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tl_daftar_siswa_nilai_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_header_col"
+                        android:gravity="center"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/header_no"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/header_tanggal"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/header_mata_pelajaran"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/header_no_induk"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/header_nama"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/tahun_ajaran"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/kelas_semester"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/tema"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/sub_tema"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/pembelajaran"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/jenis_nilai"
+                        android:textAppearance="@style/header_col" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/bg_header_col"
+                        android:padding="@dimen/pd_cell"
+                        android:text="@string/nilai"
+                        android:textAppearance="@style/header_col" />
+
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <include
+        android:id="@+id/pb_ll_nilai_edit"
+        layout="@layout/progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
